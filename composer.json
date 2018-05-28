@@ -1,0 +1,12 @@
+{
+  "autoload": {
+    "psr-4": {
+      "WebsocketServer\\": "WebsocketServer"
+    }
+  },
+  "require": {
+    "cboden/ratchet": "^0.4",
+    "react/zmq": "0.2.*|0.3.*"
+  }
+}
+

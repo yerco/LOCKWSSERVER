@@ -1,0 +1,48 @@
+## <type>: (If applied, this commit will...) <subject> (Max 50 char)
+# |<----  Using a Maximum Of 50 Characters  ---->|
+
+#<BLANK LINE>
+# Explain why this change is being made
+# |<----   Try To Limit Each Line to a Maximum Of 72 Characters   ---->|
+
+#<BLANK LINE>
+CHANGELOG
+-
+
+#<BLANK LINE>
+# Provide links or keys to any relevant tickets, articles or other resources
+# Example: Github issue #23
+
+#<BLANK LINE>
+# --- COMMIT END ---
+# Type can be
+#    feat     (new feature)
+#    fix      (bug fix)
+#    refactor (refactoring production code)
+#    style    (formatting, missing semi colons, etc; no code change)
+#    docs     (changes to documentation)
+#    test     (adding or refactoring tests; no production code change)
+#    chore    (updating grunt tasks etc; no production code change)
+# --------------------
+# Remember to
+#    Capitalize the subject line
+#    Use the imperative mood in the subject line
+#    Do not end the subject line with a period
+#    Separate subject from body with a blank line
+#    Use the body to explain what and why vs. how
+#    Can use multiple lines with "-" for bullet points in body
+# --------------------e/git
+
+# For more information about this template, check out
+# https://gist.github.com/adeekshith/cd4c95a064977cdc6c50
+
+# GUIDELINES from https://wiki.openstack.org/wiki/GitCommitMessages#Information_in_commit_messages
+# - Do not assume the reviewer understands what the original problem was.
+# - Do not assume the reviewer has access to external web services/site.
+# - Do not assume the code is self-evident/self-documenting.
+# - Describe why a change is being made.
+# - Read the commit message to see if it hints at improved code structure.
+# - Ensure sufficient information to decide whether to review.
+# - The first commit line is the most important.
+# - Describe any limitations of the current code.
+# - Do not include patch set-specific comments.
