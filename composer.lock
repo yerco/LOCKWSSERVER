@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "5bb756e4397e38d9145172db81ac6966",
+    "content-hash": "cde24a9d8f39ed23f4668a7c90bc4e99",
     "packages": [
         {
             "name": "cboden/ratchet",
-            "version": "v0.4.1",
+            "version": "v0.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ratchetphp/Ratchet.git",
-                "reference": "0d31f3a8ad4795fd48397712709e55cd07f51360"
+                "reference": "c03b1b0f56d1732a4bffcdbef5eae444f8c9e73b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ratchetphp/Ratchet/zipball/0d31f3a8ad4795fd48397712709e55cd07f51360",
-                "reference": "0d31f3a8ad4795fd48397712709e55cd07f51360",
+                "url": "https://api.github.com/repos/ratchetphp/Ratchet/zipball/c03b1b0f56d1732a4bffcdbef5eae444f8c9e73b",
+                "reference": "c03b1b0f56d1732a4bffcdbef5eae444f8c9e73b",
                 "shasum": ""
             },
             "require": {
@@ -25,8 +25,8 @@
                 "php": ">=5.4.2",
                 "ratchet/rfc6455": "^0.2",
                 "react/socket": "^1.0 || ^0.8 || ^0.7 || ^0.6 || ^0.5",
-                "symfony/http-foundation": "^2.6|^3.0|^4.0",
-                "symfony/routing": "^2.6|^3.0|^4.0"
+                "symfony/http-foundation": "^2.2|^3.0",
+                "symfony/routing": "^2.2|^3.0"
             },
             "require-dev": {
                 "phpunit/phpunit": "~4.8"
@@ -57,7 +57,7 @@
                 "sockets",
                 "websocket"
             ],
-            "time": "2017-12-12T00:49:31+00:00"
+            "time": "2017-09-14T12:18:28+00:00"
         },
         {
             "name": "evenement/evenement",
@@ -173,6 +173,132 @@
             "time": "2017-03-20T17:10:46+00:00"
         },
         {
+            "name": "monolog/monolog",
+            "version": "1.23.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Seldaek/monolog.git",
+                "reference": "fd8c787753b3a2ad11bc60c063cff1358a32a3b4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/fd8c787753b3a2ad11bc60c063cff1358a32a3b4",
+                "reference": "fd8c787753b3a2ad11bc60c063cff1358a32a3b4",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0",
+                "psr/log": "~1.0"
+            },
+            "provide": {
+                "psr/log-implementation": "1.0.0"
+            },
+            "require-dev": {
+                "aws/aws-sdk-php": "^2.4.9 || ^3.0",
+                "doctrine/couchdb": "~1.0@dev",
+                "graylog2/gelf-php": "~1.0",
+                "jakub-onderka/php-parallel-lint": "0.9",
+                "php-amqplib/php-amqplib": "~2.4",
+                "php-console/php-console": "^3.1.3",
+                "phpunit/phpunit": "~4.5",
+                "phpunit/phpunit-mock-objects": "2.3.0",
+                "ruflin/elastica": ">=0.90 <3.0",
+                "sentry/sentry": "^0.13",
+                "swiftmailer/swiftmailer": "^5.3|^6.0"
+            },
+            "suggest": {
+                "aws/aws-sdk-php": "Allow sending log messages to AWS services like DynamoDB",
+                "doctrine/couchdb": "Allow sending log messages to a CouchDB server",
+                "ext-amqp": "Allow sending log messages to an AMQP server (1.0+ required)",
+                "ext-mongo": "Allow sending log messages to a MongoDB server",
+                "graylog2/gelf-php": "Allow sending log messages to a GrayLog2 server",
+                "mongodb/mongodb": "Allow sending log messages to a MongoDB server via PHP Driver",
+                "php-amqplib/php-amqplib": "Allow sending log messages to an AMQP server using php-amqplib",
+                "php-console/php-console": "Allow sending log messages to Google Chrome",
+                "rollbar/rollbar": "Allow sending log messages to Rollbar",
+                "ruflin/elastica": "Allow sending log messages to an Elastic Search server",
+                "sentry/sentry": "Allow sending log messages to a Sentry server"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Monolog\\": "src/Monolog"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jordi Boggiano",
+                    "email": "j.boggiano@seld.be",
+                    "homepage": "http://seld.be"
+                }
+            ],
+            "description": "Sends your logs to files, sockets, inboxes, databases and various web services",
+            "homepage": "http://github.com/Seldaek/monolog",
+            "keywords": [
+                "log",
+                "logging",
+                "psr-3"
+            ],
+            "time": "2017-06-19T01:22:40+00:00"
+        },
+        {
+            "name": "paragonie/random_compat",
+            "version": "v2.0.12",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/paragonie/random_compat.git",
+                "reference": "258c89a6b97de7dfaf5b8c7607d0478e236b04fb"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/paragonie/random_compat/zipball/258c89a6b97de7dfaf5b8c7607d0478e236b04fb",
+                "reference": "258c89a6b97de7dfaf5b8c7607d0478e236b04fb",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.2.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "4.*|5.*"
+            },
+            "suggest": {
+                "ext-libsodium": "Provides a modern crypto API that can be used to generate random bytes."
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "lib/random.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Paragon Initiative Enterprises",
+                    "email": "security@paragonie.com",
+                    "homepage": "https://paragonie.com"
+                }
+            ],
+            "description": "PHP 5.x polyfill for random_bytes() and random_int() from PHP 7",
+            "keywords": [
+                "csprng",
+                "pseudorandom",
+                "random"
+            ],
+            "time": "2018-04-04T21:24:14+00:00"
+        },
+        {
             "name": "psr/http-message",
             "version": "1.0.1",
             "source": {
@@ -221,6 +347,53 @@
                 "response"
             ],
             "time": "2016-08-06T14:39:51+00:00"
+        },
+        {
+            "name": "psr/log",
+            "version": "1.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/php-fig/log.git",
+                "reference": "4ebe3a8bf773a19edfe0a84b6585ba3d401b724d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/php-fig/log/zipball/4ebe3a8bf773a19edfe0a84b6585ba3d401b724d",
+                "reference": "4ebe3a8bf773a19edfe0a84b6585ba3d401b724d",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Psr\\Log\\": "Psr/Log/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "PHP-FIG",
+                    "homepage": "http://www.php-fig.org/"
+                }
+            ],
+            "description": "Common interface for logging libraries",
+            "homepage": "https://github.com/php-fig/log",
+            "keywords": [
+                "log",
+                "psr",
+                "psr-3"
+            ],
+            "time": "2016-10-10T12:19:37+00:00"
         },
         {
             "name": "ratchet/rfc6455",
@@ -637,29 +810,30 @@
         },
         {
             "name": "symfony/http-foundation",
-            "version": "v4.0.11",
+            "version": "v3.4.11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/http-foundation.git",
-                "reference": "277b757a2d3960170d99d372e171a8a18916467a"
+                "reference": "a7b5fc605d1c215cea1122359044b1e682eb70c0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/http-foundation/zipball/277b757a2d3960170d99d372e171a8a18916467a",
-                "reference": "277b757a2d3960170d99d372e171a8a18916467a",
+                "url": "https://api.github.com/repos/symfony/http-foundation/zipball/a7b5fc605d1c215cea1122359044b1e682eb70c0",
+                "reference": "a7b5fc605d1c215cea1122359044b1e682eb70c0",
                 "shasum": ""
             },
             "require": {
-                "php": "^7.1.3",
-                "symfony/polyfill-mbstring": "~1.1"
+                "php": "^5.5.9|>=7.0.8",
+                "symfony/polyfill-mbstring": "~1.1",
+                "symfony/polyfill-php70": "~1.6"
             },
             "require-dev": {
-                "symfony/expression-language": "~3.4|~4.0"
+                "symfony/expression-language": "~2.8|~3.0|~4.0"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "4.0-dev"
+                    "dev-master": "3.4-dev"
                 }
             },
             "autoload": {
@@ -686,7 +860,7 @@
             ],
             "description": "Symfony HttpFoundation Component",
             "homepage": "https://symfony.com",
-            "time": "2018-05-25T11:08:56+00:00"
+            "time": "2018-05-25T11:07:31+00:00"
         },
         {
             "name": "symfony/polyfill-mbstring",
@@ -748,35 +922,94 @@
             "time": "2018-04-26T10:06:28+00:00"
         },
         {
-            "name": "symfony/routing",
-            "version": "v4.0.11",
+            "name": "symfony/polyfill-php70",
+            "version": "v1.8.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/symfony/routing.git",
-                "reference": "e8833b64b139926cbe1610d53722185e55c18e44"
+                "url": "https://github.com/symfony/polyfill-php70.git",
+                "reference": "77454693d8f10dd23bb24955cffd2d82db1007a6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/routing/zipball/e8833b64b139926cbe1610d53722185e55c18e44",
-                "reference": "e8833b64b139926cbe1610d53722185e55c18e44",
+                "url": "https://api.github.com/repos/symfony/polyfill-php70/zipball/77454693d8f10dd23bb24955cffd2d82db1007a6",
+                "reference": "77454693d8f10dd23bb24955cffd2d82db1007a6",
                 "shasum": ""
             },
             "require": {
-                "php": "^7.1.3"
+                "paragonie/random_compat": "~1.0|~2.0",
+                "php": ">=5.3.3"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.8-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Polyfill\\Php70\\": ""
+                },
+                "files": [
+                    "bootstrap.php"
+                ],
+                "classmap": [
+                    "Resources/stubs"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nicolas Grekas",
+                    "email": "p@tchwork.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony polyfill backporting some PHP 7.0+ features to lower PHP versions",
+            "homepage": "https://symfony.com",
+            "keywords": [
+                "compatibility",
+                "polyfill",
+                "portable",
+                "shim"
+            ],
+            "time": "2018-04-26T10:06:28+00:00"
+        },
+        {
+            "name": "symfony/routing",
+            "version": "v3.4.11",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/routing.git",
+                "reference": "e382da877f5304aabc12ec3073eec430670c8296"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/routing/zipball/e382da877f5304aabc12ec3073eec430670c8296",
+                "reference": "e382da877f5304aabc12ec3073eec430670c8296",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^5.5.9|>=7.0.8"
             },
             "conflict": {
-                "symfony/config": "<3.4",
-                "symfony/dependency-injection": "<3.4",
+                "symfony/config": "<3.3.1",
+                "symfony/dependency-injection": "<3.3",
                 "symfony/yaml": "<3.4"
             },
             "require-dev": {
                 "doctrine/annotations": "~1.0",
                 "doctrine/common": "~2.2",
                 "psr/log": "~1.0",
-                "symfony/config": "~3.4|~4.0",
-                "symfony/dependency-injection": "~3.4|~4.0",
-                "symfony/expression-language": "~3.4|~4.0",
-                "symfony/http-foundation": "~3.4|~4.0",
+                "symfony/config": "^3.3.1|~4.0",
+                "symfony/dependency-injection": "~3.3|~4.0",
+                "symfony/expression-language": "~2.8|~3.0|~4.0",
+                "symfony/http-foundation": "~2.8|~3.0|~4.0",
                 "symfony/yaml": "~3.4|~4.0"
             },
             "suggest": {
@@ -790,7 +1023,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "4.0-dev"
+                    "dev-master": "3.4-dev"
                 }
             },
             "autoload": {
@@ -823,7 +1056,7 @@
                 "uri",
                 "url"
             ],
-            "time": "2018-05-16T14:21:07+00:00"
+            "time": "2018-05-16T12:49:49+00:00"
         }
     ],
     "packages-dev": [],

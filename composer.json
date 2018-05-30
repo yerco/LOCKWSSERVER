@@ -5,8 +5,9 @@
     }
   },
   "require": {
-    "cboden/ratchet": "^0.4",
-    "react/zmq": "0.2.*|0.3.*"
+    "cboden/ratchet": "0.4",
+    "react/zmq": "0.2.*|0.3.*",
+    "monolog/monolog": "1.23.0"
   }
 }
 
