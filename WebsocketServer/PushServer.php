@@ -32,11 +32,13 @@ class PushServer
         $pull = $context->getSocket(ZMQ::SOCKET_PULL);
         // Binding to 127.0.0.1 means the only client that can connect is itself
         /* DEVELOPMENT */
-        $pull->bind('tcp://127.0.0.1:5555');
+        //$pull->bind('tcp://127.0.0.1:5555');
         /* PRODUCTION */
         //$pull->bind('tcp://188.166.11.160:5555');
         /* DOCKER */
-        //$pull->bind('tcp://127.0.0.1:5555');
+        //$pull->bind('tcp://lock8dockerized_default:5556');
+        //$pull->bind('tcp://127.0.0.1:5556');
+        $pull->bind('tcp://0.0.0.0:5556');
         $pull->on('message', array($pusher, 'onNewData'));
 
         if ($this->logger) {
@@ -51,7 +53,7 @@ class PushServer
         }
 
         // Set up our WebSocket server for clients wanting real-time updates
-        $webSock = new React\Socket\Server('0.0.0.0:8018', $this->loop); //
+        $webSock = new React\Socket\Server('0.0.0.0:8028', $this->loop); //
         // Binding to 0.0.0//.0 means remotes can connect
         $webServer = new IoServer(
             new HttpServer(

@@ -10,20 +10,23 @@ RUN set -xe && \
     mkdir /opt/push_server  && \
     chown -R appuser:appuser /opt/push_server
 
-# zmq extension for php
-RUN apt-get update && apt-get install -y zlib1g-dev libzmq-dev wget git lsof \
+# to have the extension zmq
+COPY ./php.ini /usr/local/etc/php/
+
+# zmq extension for php and some utilities
+RUN apt-get update && apt-get install -y zlib1g-dev libzmq-dev wget git lsof vim locate tree apt-utils \
     && pecl install zmq-beta \
     && docker-php-ext-install zip
 
 EXPOSE 5556
 EXPOSE 8028
 
+# http://zeromq.org/bindings:php
+#RUN echo 'extension=zmq.so' >> /usr/local/etc/php/conf.d/docker-php-ext-zmq.ini
+
 RUN mkdir -p /home/appuser/.composer && \
     chown -R appuser:appuser /home/appuser/.composer && \
-    chmod +w -R /home/appuser/.composer
-
-# http://zeromq.org/bindings:php
-RUN echo 'extension=zmq.so' >> /usr/local/etc/php/conf.d/docker-php-ext-zmq.ini
+    chmod u+w -R /home/appuser/.composer
 
 # switch from root to appuser
 USER appuser
@@ -41,7 +44,15 @@ COPY --chown=appuser:appuser . /opt/push_server/
 
 WORKDIR /opt/push_server
 
+# precaution
+RUN mkdir -p ./vendor
+RUN mkdir -p ./var/logs && mkdir -p ./var/cache
+RUN mkdir -p ./var/sessions
+
 # Libraries used for websocketing
 RUN ./composer.phar install
+RUN chmod -R a+w ./var/logs && chmod a+w ./var/cache
+RUN chmod -R a+w ./var/sessions
+RUN ./composer.phar dump-autoload
 
 CMD ["php", "/opt/push_server/WebsocketServer/PushServer.php"]
